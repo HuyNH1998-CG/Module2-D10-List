@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-
 public class MyListTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         MyList<Integer> list = new MyList<>();
         list.add(5);
         list.add(6);
@@ -15,7 +13,7 @@ public class MyListTest {
         list.add(7459);
         list.add(4, 12);
         System.out.println(list);
-        MyList<Integer> list1 = (MyList<Integer>) list.clone();
+        Integer list1 = list.clone();
         System.out.println(list1);
     }
 

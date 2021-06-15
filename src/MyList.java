@@ -1,7 +1,6 @@
 import java.util.Arrays;
-import java.util.ArrayList;
 
-public class MyList<E> extends ArrayList<E> implements Cloneable {
+public class MyList<E> implements Cloneable {
     private int size = 0;
     private static final int defaultCapacity = 10;
     private Object[] elements;
@@ -38,6 +37,9 @@ public class MyList<E> extends ArrayList<E> implements Cloneable {
         return this.size;
     }
 
+    public E clone() throws CloneNotSupportedException {
+        return (E) super.clone();
+    }
 
     public boolean contains(Object o) {
         for (Object element : elements) {
